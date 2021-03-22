@@ -6,9 +6,19 @@
  <body>
   <article>
     <form>
-      <input type="text" id="inp"> Поле ввода <Br>
-      <button id="bt"></button>
+      <input type="text" id="inp" placeholder="Поле ввода"><Br>
+      <button id="bt" onclick="func()"></button>
     </form>
   </article>
+   <script>
+    function func(){
+      	var elem1=document.getElementById('inp');
+       elem1.innerHTML =
+     
+      	var result=Number(elem1.value)+Number(elem2.value);
+      	var span=document.getElementById('result');
+      	span.innerHTML=result;
+    }
+   </script>
  </body>
 </html>

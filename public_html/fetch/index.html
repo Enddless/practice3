@@ -18,7 +18,7 @@ console.log("Введенная ссылка в инпут " + inputLink);
         var response = await fetch(inputLink);
         var rezult = await response.text(); // прочитать тело ответа как текст
       console.log("Статус" + rezult);
-      elem1.value = rezult;
+      input.value = rezult;
         }
    </script>
  </body>

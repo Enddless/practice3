@@ -7,18 +7,19 @@
   <article>
     <form>
       <input type="text" id="inp" placeholder="Поле ввода"><Br>
-      <button id="bt" onclick="func()"></button>
+      <button id="bt" onclick="func()">Нажми на кнопку</button>
     </form>
   </article>
    <script>
-    function func(){
-      	var elem1=document.getElementById('inp');
-       elem1.innerHTML =
-     
-      	var result=Number(elem1.value)+Number(elem2.value);
-      	var span=document.getElementById('result');
-      	span.innerHTML=result;
-    }
+    async function func(){
+      	var input = document.getElementById("inp");
+        var inputLink = input.value; //присваиваем содержимое инпута в новую переменную
+console.log("Введенная ссылка в инпут " + inputLink);
+        var response = await fetch(inputLink);
+        var rezult = await response.text(); // прочитать тело ответа как текст
+      console.log("Статус" + rezult);
+      elem1.value = rezult;
+        }
    </script>
  </body>
 </html>

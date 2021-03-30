@@ -12,9 +12,14 @@
     var inputLink = input.value; //присваиваем содержимое инпута в новую переменную
     console.log("Введенная ссылка в инпут " + inputLink);
     var response = await fetch("http://cors-anywhere.herokuapp.com/"+ inputLink);
-    var rezult = await response.text(); // прочитать тело ответа как текст
-    console.log("Статус: " + rezult);
-    input.value = rezult;
+     if (response.ok) {
+                ar rezult = await response.text(); // прочитать тело ответа как текст
+                return rezult;
+                console.log("Результат: " + rezult);
+                input.value = rezult;
+            }
+    
+    
     }
    </script>
  </body>

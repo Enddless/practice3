@@ -5,11 +5,13 @@
       "Access-Control-Allow-Origin": "*",
       "Content-Type": "text/html; charset=UTF-8"
     },
-    "/sample*": {
+    "/sample/*": {
       "Access-Control-Allow-Origin": "*",
       "Content-Type": "text/plain; charset=UTF-8"
     },
- 
+     "/fetch/*": {
+      "Access-Control-Allow-Origin": "*"
+    },
     "/login/*": {
       "Access-Control-Allow-Origin": "*",
       "Content-Type": "text/plain; charset=UTF-8"

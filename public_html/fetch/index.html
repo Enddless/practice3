@@ -11,7 +11,7 @@
     var input = document.getElementById("inp");
     var inputLink = input.value; //присваиваем содержимое инпута в новую переменную
     console.log("Введенная ссылка в инпут " + inputLink);
-    var response = await fetch(inputLink);
+    var response = await fetch(("https://cors-anywhere.herokuapp.com/"+ inputLink);
     var rezult = await response.text(); // прочитать тело ответа как текст
         
         console.log("Результат: " + rezult);

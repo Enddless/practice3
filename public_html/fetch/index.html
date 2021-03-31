@@ -5,20 +5,19 @@
  </head>
  <body>
       <input type="text" id="inp" placeholder="Поле ввода"><Br>
-      <button id="bt">Нажми на кнопку</button>
+      <button id="bt" onclick="func()">Нажми на кнопку</button>
    <script>
-    function func(){
-     var input = document.getElementById("inp");
-     
-     document.getElementById("bt").addEventListener('click', async e => {
-      const URL = input.value; //присваиваем содержимое инпута в новую переменную
-      const result = await fetch(URL);
-      const text = await result.text();
-      console.log("Результат: " + text);
-      e.target.textContent = text;
-    });
-
-    
+    async function func(){
+    var input = document.getElementById("inp");
+    var inputLink = input.value; //присваиваем содержимое инпута в новую переменную
+    console.log("Введенная ссылка в инпут " + inputLink);
+    var response = await fetch("https://cors-anywhere.herokuapp.com/"+ inputLink);
+    var rezult = await response.text(); // прочитать тело ответа как текст
+        
+        console.log("Результат: " + rezult);
+        input.value = rezult;
+    }
    </script>
  </body>
 </html>
+

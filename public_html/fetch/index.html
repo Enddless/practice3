@@ -15,7 +15,7 @@
       const result = await fetch(URL);
       const text = await result.text();
       console.log("Результат: " + text);
-      input.value = text;
+      e.target.textContent = text;
     });
 
     

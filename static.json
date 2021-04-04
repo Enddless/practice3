@@ -8,9 +8,9 @@
     "/sample/*": {
       "Access-Control-Allow-Origin": "*",
       "Content-Type": "text/plain; charset=UTF-8",
-      "X-Reply": "openedu"
+      "X-Reply": "bdagmed"
     },
-       "/fetch/*": {
+      "/fetch/*": {
       "Access-Control-Allow-Origin": "*",
       "Content-Type": "text/html; charset=UTF-8",
       "X-Reply": "bdagmed"
@@ -18,7 +18,7 @@
     "/login/*": {
       "Access-Control-Allow-Origin": "*",
       "Content-Type": "text/plain; charset=UTF-8",
-      "X-Reply": "openedu"
+      "X-Reply": "bdagmed"
     }
   }    
 }
